@@ -1,0 +1,54 @@
+.mau-tieu-de{
+    color: white;
+    background-color: forestgreen;
+    text-align: center;
+}
+.size-chu-100{
+    font-size: 20px;
+}
+.mau-xanh-duong{
+    color:purple;
+}
+.canh-trai{
+    width: 500px;
+    float: left;
+    background-color: tomato;
+    margin-left: 200px;
+}
+.canh-phai{
+    width: 850px;
+    height: 216px;
+}
+.body-style{
+    width: 500;
+    height: 700;
+    font-family: Arial, Helvetica, sans-serif
+}
+.hoc-van{
+    background-color: teal;
+    color: white;
+    width: 650px;
+    margin-left: 200px;
+    margin-right: 200px
+    
+}
+.table-style{
+    margin-left: 50px;
+    background-color:white;
+
+    color:purple;
+}
+.kinh-nghiem-style{
+    background-color:yellowgreen;
+    color:white;
+    width: 650px;
+    margin-left: 200px;
+    margin-right: 200px
+}
+.sothich-kynang-style{
+    margin-left: 200px;
+    margin-right: 200px;
+    width: 650px;
+    background-color:darkgrey;
+    color:crimson;  
+}
