@@ -1,0 +1,63 @@
+body{
+    width: 960px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    /* width: 80%; */
+}   
+
+.div-mot{
+    background-color:red;
+    width: 20%;
+    height: 100px;
+    /* margin-right: 20px; */
+    margin: 10px;
+}
+.div-hai{
+    background-color: blue;
+    width: 80%;
+    height: 100px;
+    margin: 10px;
+}
+.div-ba{
+    /* background-color: green; */
+    width: 100%;
+    height: 300px;
+    display: flex;
+    margin: 10px;
+}
+.div-ba-con1{
+    width:70%;
+    height: 100%;
+    background-color: green;
+}
+.div-ba-con1-2{
+    width: 100%;
+    height: 50%;
+    background-color: orange;
+}
+.div-ba-con2{
+    width: 30%;
+    background-color:pink;  
+    height: 100%;
+}
+.div-cha-bon{
+ display: flex;
+}
+.div-con{
+    width: 33.3%;
+    height: 100px;
+}
+.div-vuong-mot{
+    background-color: fuchsia;
+}
+.div-vuong-hai{
+    background-color: gold;
+}
+.div-vuong-ba{
+    background-color:indigo;
+}
