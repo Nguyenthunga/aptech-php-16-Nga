@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./Boostrap.css">
+</head>
+
+<body style="height:100vh" ;>
+    <div class="container h-75">
+        <!-- d-flex: mặc định là chiều ngang nên justify-center thì nó sẽ center theo chiều ngang -->
+        <!-- Dòng dưới vì chiều cao là 100% nên khi set center theo chiều cao thì nó vẫn như vậy -->
+        <div class="row h-100 d-flex justify-content-center ">
+            <div class="col-4 h-100 d-flex justify-content-center align-items-center">
+                <!-- chiều cao của from không set nên chiều cao của nó theo các thành phần bên trong-->
+                <form class="col-12 ">
+                    <div class="form-group d-flex flex-column align-items-center">
+                        <img src="./facebook.jpg">
+                        <h2 class=" font-weight-light mt-3">Please sign in</h2>
+                        <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+                        <input type="password" class="form-control" id="pwd" placeholder="Password" name="pswd">
+                        <div>
+                            <input class="form-check-input" type="checkbox">Remember me</div>
+                    </div>
+                    <button type="button" class="btn btn-block btn-primary">Sign in</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div>
+        <p class="text-secondary text-center">© 2017-2018</p>
+    </div>
+</body>
+
+</html>
