@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <button id="getdata">data</button>
+    <div id ="in-data"></div>
+    <table id = "table-data">
+        <tr ID ="title-data">
+    </table>
+    <script>
+        $(document).ready(function(){
+           $("#getdata").click(function(){
+                $.get('./data-baitap.json',function(data,status){
+                    //*Q1:reset table trước khi load lại
+                    // $("#table-data").reset();
+                    // in du liệu ra console
+                    // console.log(data);
+                    // var a = Object.keys(data);
+                    // console.log(a);
+                    // for(var i = 0 ; i < a.length ;i ++){
+                    //     console.log(data[a[i]]);
+                    // };
+                        
+                    var a = Object.keys(data);
+                    // console.log(a);
+                    //*Q2:tại sao in theo kiểu này không được?
+                    // '<h1>'+ data[a[0]] + '</h1>';
+                    // $("<i></i>").text("data[a[0]]");
+                    var txt1 =  $("<h1></h1>").text(data[a[0]]);
+                    $("#in-data").text(data[a[0]]);
+                    $("#in-data").after(txt1);
+                    //console.log(data[a[1]]);
+                    // console.log(data[a[1]].length);
+                    // console.log(data[a[1]][1].name);
+ 
+                        // tạo table
+                    $("#title-data").append("<th>ID</th>")
+                    $("#title-data").append("<th>NAME</th>")
+                    $("#title-data").append("<th>EMAIL</th>")
+                    $("#title-data").append("<th>PASSWORD</th>")
+                    $("#title-data").append("<th>created_at</th>")
+                    $("#title-data").append("<th>updated_at</th>")
+                   for(var i = 0; i < data[a[1]].length; i++ ){
+                    
+                    //Q3: tại sao câu này lại ra object???
+                    //  var name = $("<table><thead><td></td></thead></table>").text(data[a[1]][i].name);
+                    var id1 = data[a[1]][i].id;
+                    var name1 =  data[a[1]][i].name; 
+                    var email1 = data[a[1]][i].email;
+                    var pass1 = data[a[1]][i].password;
+                    var created1 = data[a[1]][i].created_at;
+                    var updated1 = data[a[1]][i].updated_at;
+                    var tdid = ("<td>" + id1 + "</td>");
+                    var tdname = ("<td>" + name1 + "</td>");
+                    var tdemail= ("<td>" + email1 + "</td>");
+                    var tdpass =  ("<td>" + pass1 + "</td>");
+                    var tdcrea = ("<td>" + created1 + "</td>");
+                    var tdupdate = ("<td>" + updated1 + "</td>");
+                    $("#table-data").append("<tr>" + tdid + tdname + tdemail + tdpass + tdcrea + tdupdate + "</tr>");
+                   }
+                });
+           });      
+        });
+    </script>
+</body>
+</html>

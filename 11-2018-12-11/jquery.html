@@ -1,0 +1,25 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script>
+       $(document).ready(function(){
+           $("#btn_on_off").click(function(){
+            var a = $("#myImage").attr("src");
+            var n = a.search('on');
+            if(n == -1){
+                $('#myImage').attr("src","./pic_bulbon.gif")
+                $('#btn_on_off').text("OFF")
+            }else{
+                $('#myImage').attr("src","./pic_bulboff.gif")
+                $('#btn_on_off').text("ON")
+            }
+           });
+       });
+   </script>
+</head>
+<body>
+    <img id="myImage" src="./pic_bulboff.gif">
+    <button id="btn_on_off">ON</button>
+</body>
+</html>
